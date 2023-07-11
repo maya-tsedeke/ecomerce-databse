@@ -21,6 +21,20 @@ This API provides CRUD (Create, Read, Update, Delete) operations for the Product
         | imageURL   | text     | URL of the category image   |
 
 # Product Endpoints
+
+| Method | Endpoint               | Description                             |
+|--------|------------------------|-----------------------------------------|
+| GET    | /products              | Retrieves all products                   |
+| GET    | /products/{id}         | Retrieves a specific product by ID       |
+| POST   | /products              | Creates a new product                    |
+| PUT    | /products/{id}         | Updates an existing product              |
+| DELETE | /products/{id}         | Deletes a product by ID                  |
+| GET    | /categories            | Retrieves all categories                 |
+| GET    | /categories/{id}       | Retrieves a specific category by ID      |
+| POST   | /categories            | Creates a new category                   |
+| PUT    | /categories/{id}       | Updates an existing category             |
+| DELETE | /categories/{id}       | Deletes a category by ID                 |
+
 # API Documentation
 
 This API provides CRUD (Create, Read, Update, Delete) operations for the Product and Category tables in a PostgreSQL database. It allows you to manage products and categories, perform reviews, and more.
