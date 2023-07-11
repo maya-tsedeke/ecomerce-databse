@@ -68,35 +68,38 @@ This API provides CRUD (Create, Read, Update, Delete) operations for the Product
 * Endpoint: GET /products/{id}
 - Description: Retrieves a product by its ID.
 - Sample Response:
-
-        {
-        "id": 1,
-        "name": "Product 1",
-        "description": "Description of Product 1",
-        "price": 19.99,
-        "quantity": 100,
-        "imageURL": "https://example.com/product1.jpg"
-        }
+   ```json
+    {
+    "id": 1,
+    "name": "Product 1",
+    "description": "Description of Product 1",
+    "price": 19.99,
+    "quantity": 100,
+    "imageURL": "https://example.com/product1.jpg"
+    }
 ## Create a new product
 * Endpoint: POST /products
 - Description: Creates a new product.
 - Request Body:
-        {
-        "name": "New Product",
-        "description": "Description of New Product",
-        "price": 24.99,
-        "quantity": 50,
-        "imageURL": "https://example.com/newproduct.jpg"
-        }
+    ```json
+    {
+    "name": "New Product",
+    "description": "Description of New Product",
+    "price": 24.99,
+    "quantity": 50,
+    "imageURL": "https://example.com/newproduct.jpg"
+    }
 -Sample Response:
-        {
-        "id": 3,
-        "name": "New Product",
-        "description": "Description of New Product",
-        "price": 24.99,
-        "quantity": 50,
-        "imageURL": "https://example.com/newproduct.jpg"
-        }
+
+    ```json
+    {
+    "id": 3,
+    "name": "New Product",
+    "description": "Description of New Product",
+    "price": 24.99,
+    "quantity": 50,
+    "imageURL": "https://example.com/newproduct.jpg"
+    }
 
 ## Update a product
 * Endpoint: PUT /products/{id}
