@@ -21,41 +21,49 @@ This API provides CRUD (Create, Read, Update, Delete) operations for the Product
         | imageURL   | text     | URL of the category image   |
 
 # Product Endpoints
-## Get all products
-* Endpoint: GET /products
-- Description: Retrieves all products.
-- Parameters:
-    - ´sort´ (optional): Specifies the sorting column and direction. E.g., sort=name:asc for sorting by name in ascending order.
-    - ´filter´ (optional): Specifies the filter conditions. E.g., filter=category:electronics for filtering products by category.
-    - ´page´ (optional): Specifies the page number for pagination. E.g., page=2 for the second page of results.
-    - ´limit´ (optional): Specifies the maximum number of products per page. E.g., limit=10 for 10 products per page.
-    - Sample Response:
+# API Documentation
 
-        {
-        "data": [
-            {
-            "id": 1,
-            "name": "Product 1",
-            "description": "Description of Product 1",
-            "price": 19.99,
-            "quantity": 100,
-            "imageURL": "https://example.com/product1.jpg"
-            },
-            {
-            "id": 2,
-            "name": "Product 2",
-            "description": "Description of Product 2",
-            "price": 29.99,
-            "quantity": 50,
-            "imageURL": "https://example.com/product2.jpg"
-            }
-        ],
-        "pagination": {
-            "page": 1,
-            "limit": 10,
-            "total": 2
-        }
-        }
+This API provides CRUD (Create, Read, Update, Delete) operations for the Product and Category tables in a PostgreSQL database. It allows you to manage products and categories, perform reviews, and more.
+
+## Product Endpoints
+
+### Get all products
+
+- Endpoint: GET /products
+- Description: Retrieves all products from the database with support for sorting, filtering, and pagination.
+- Parameters:
+  - `sort` (optional): Specifies the sorting column and direction. Default is 'id:asc'. E.g., `sort=name:asc` for sorting by name in ascending order.
+  - `filter` (optional): Specifies the filter conditions. E.g., `filter=category:electronics` for filtering products by category.
+  - `page` (optional): Specifies the page number for pagination. Default is 1.
+  - `limit` (optional): Specifies the maximum number of products per page. Default is 10.
+- Sample Response:
+  ```json
+  {
+    "data": [
+      {
+        "id": 1,
+        "name": "Product 1",
+        "description": "Description of Product 1",
+        "price": 19.99,
+        "quantity": 100,
+        "imageURL": "https://example.com/product1.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Product 2",
+        "description": "Description of Product 2",
+        "price": 29.99,
+        "quantity": 50,
+        "imageURL": "https://example.com/product2.jpg"
+      }
+    ],
+    "pagination": {
+      "page": 1,
+      "limit": 10,
+      "total": 2
+    }
+  }
+
 ## Get a product by ID
 * Endpoint: GET /products/{id}
 - Description: Retrieves a product by its ID.
